@@ -1,5 +1,5 @@
-console.log('works')
+const hidden = 'näkyy'
 
 const startButtonClick = () => {
-  console.log('klik')
+  console.log(hidden)
 }
