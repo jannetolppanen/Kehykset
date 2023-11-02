@@ -1,5 +1,12 @@
-const hidden = 'näkyy'
+const loadScriptA = (callback) => {
+  let script = document.createElement('script');
+  script.src = 'src/delayedScriptA.js';
+  script.onload = () => callback();
+  document.head.append(script);
+};
 
 const startButtonClick = () => {
-  console.log(hidden)
-}
+  loadScriptA( () => {
+    delayedFunctionCallA();
+  });
+};
